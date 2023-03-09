@@ -1,11 +1,11 @@
-"use client";
-import { useRouter } from "next/router";
+interface PostProps {
+  params: {
+    id: string;
+  };
+}
 
-const Post = () => {
-  const router = useRouter();
-  const { id } = router.query;
-
-  return <p>Post: {id}</p>;
+const Post = ({ params }: PostProps) => {
+  return <p>Post: {params.id}</p>;
 };
 
 export default Post;
